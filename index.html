@@ -78,6 +78,54 @@
       gap: 20px;
       margin: 15px 0;
     }
+
+    /* ====== মোবাইল রেসপন্সিভ (600px নিচে) ====== */
+    @media (max-width: 600px) {
+      body {
+        padding-top: 20px;
+      }
+
+      .slot {
+        font-size: 40px;
+        margin: 20px 10px;
+      }
+
+      button,
+      select,
+      input[type="text"] {
+        font-size: 16px;
+        padding: 8px 15px;
+        width: 90%;
+        max-width: 300px;
+        margin: 8px auto;
+        display: block;
+      }
+
+      label {
+        display: block;
+        margin-top: 15px;
+      }
+
+      #balance {
+        font-size: 20px;
+      }
+
+      #result {
+        font-size: 18px;
+        min-height: auto;
+        margin-top: 15px;
+      }
+
+      /* Center buttons stack vertically on mobile */
+      .center-buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      input[type="text"] {
+        margin-left: 0;
+      }
+    }
   </style>
 </head>
 

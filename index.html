@@ -55,7 +55,6 @@
       border: 1px solid #ccc;
     }
 
-    /* 🔄 Spin Animation */
     @keyframes spinEffect {
       0% {
         transform: rotateX(0deg);
@@ -71,7 +70,6 @@
       animation: spinEffect 0.6s ease;
     }
 
-    /* ✅ Centered Buttons initially */
     .center-buttons {
       display: flex;
       justify-content: center;
@@ -79,7 +77,6 @@
       margin: 15px 0;
     }
 
-    /* ====== মোবাইল রেসপন্সিভ (600px নিচে) ====== */
     @media (max-width: 600px) {
       body {
         padding-top: 20px;
@@ -116,7 +113,6 @@
         margin-top: 15px;
       }
 
-      /* Center buttons stack vertically on mobile */
       .center-buttons {
         flex-direction: column;
         gap: 10px;
@@ -130,6 +126,10 @@
 </head>
 
 <body>
+
+  <marquee direction="left" style="color: red; font-weight: bold; font-size: 18px;">
+    💡 Add Balance এর জন্য কল করুন +8081109878908
+  </marquee>
 
   <h1>🎰 Slot Machine</h1>
   <div id="balance">💰 Balance: $15</div>
@@ -146,7 +146,6 @@
     </select>
   </label>
 
-  <!-- ✅ Buttons initially centered -->
   <div id="buttonContainer" class="center-buttons">
     <button id="spinBtn" onclick="spin()">Spin</button>
     <button onclick="withdraw()">Withdraw ($50)</button>

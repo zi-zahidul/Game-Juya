@@ -78,15 +78,55 @@
       gap: 20px;
       margin: 15px 0;
     }
-    
-    /* Image styling */
-    #promoPic {
-      width: 100px;
-      margin-top: 20px;
+
+    /* ====== মোবাইল রেসপন্সিভ (600px নিচে) ====== */
+    @media (max-width: 600px) {
+      body {
+        padding-top: 20px;
+      }
+
+      .slot {
+        font-size: 40px;
+        margin: 20px 10px;
+      }
+
+      button,
+      select,
+      input[type="text"] {
+        font-size: 16px;
+        padding: 8px 15px;
+        width: 90%;
+        max-width: 300px;
+        margin: 8px auto;
+        display: block;
+      }
+
+      label {
+        display: block;
+        margin-top: 15px;
+      }
+
+      #balance {
+        font-size: 20px;
+      }
+
+      #result {
+        font-size: 18px;
+        min-height: auto;
+        margin-top: 15px;
+      }
+
+      /* Center buttons stack vertically on mobile */
+      .center-buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      input[type="text"] {
+        margin-left: 0;
+      }
     }
   </style>
-  <!-- Manifest for PWA -->
-  <link rel="manifest" href="manifest.json" />
 </head>
 
 <body>
@@ -106,6 +146,7 @@
     </select>
   </label>
 
+  <!-- ✅ Buttons initially centered -->
   <div id="buttonContainer" class="center-buttons">
     <button id="spinBtn" onclick="spin()">Spin</button>
     <button onclick="withdraw()">Withdraw ($50)</button>
@@ -121,14 +162,13 @@
 
   <p id="result">Click spin to play!</p>
 
-  <!-- Promotional picture -->
-  <img id="promoPic" src="https://cdn-icons-png.flaticon.com/512/3106/3106777.png" alt="Install our app!" />
-
   <!-- Sounds -->
   <audio id="spinSound" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-jump-coin-216.wav"
     preload="auto"></audio>
-  <audio id="winSound" src="https://assets.mixkit.co/sfx/preview/mixkit-winning-notification-2018.wav" preload="auto"></audio>
-  <audio id="loseSound" src="https://assets.mixkit.co/sfx/preview/mixkit-retro-arcade-lose-2027.wav" preload="auto"></audio>
+  <audio id="winSound" src="https://assets.mixkit.co/sfx/preview/mixkit-winning-notification-2018.wav"
+    preload="auto"></audio>
+  <audio id="loseSound" src="https://assets.mixkit.co/sfx/preview/mixkit-retro-arcade-lose-2027.wav"
+    preload="auto"></audio>
 
   <script>
     const symbols = ["🍒", "🍋", "🔔", "💎", "7️⃣"];
